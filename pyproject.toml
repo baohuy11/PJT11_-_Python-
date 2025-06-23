@@ -1,0 +1,26 @@
+[project]
+name = "python-advice-system"
+version = "1.0.0"
+description = "Python課題アドバイス生成システム"
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-multipart>=0.0.6",
+    "jinja2>=3.1.0",
+    "python-dotenv>=1.0.0",
+    "sqlalchemy>=2.0.0",
+    "google-generativeai>=0.3.0",
+    "docker>=6.0.0",
+    "pydantic>=2.5.0,<3.0.0",
+    "pytest>=7.4.0",
+    "requests>=2.31.0",
+    "aiofiles>=23.0.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

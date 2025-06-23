@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python課題アドバイス生成システム</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Python課題アドバイス</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/admin">管理者ページ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="mb-0">Python課題提出</h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- 問題選択 -->
+                        <div class="mb-3">
+                            <label for="problemSelect" class="form-label">問題を選択</label>
+                            <select class="form-select" id="problemSelect">
+                                <option value="">問題を選択してください</option>
+                            </select>
+                        </div>
+
+                        <!-- 問題表示 -->
+                        <div id="problemDisplay" class="mb-3" style="display: none;">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="problemTitle"></h5>
+                                    <p class="card-text" id="problemDescription"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 提出フォーム -->
+                        <form id="submissionForm">
+                            <div class="mb-3">
+                                <label for="studentName" class="form-label">名前</label>
+                                <input type="text" class="form-control" id="studentName" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="codeInput" class="form-label">Pythonコード</label>
+                                <textarea class="form-control" id="codeInput" rows="15" placeholder="ここにPythonコードを入力してください..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="spinner-border spinner-border-sm d-none" id="submitSpinner"></span>
+                                コードを提出
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 結果表示 -->
+                <div id="resultCard" class="card mt-4" style="display: none;">
+                    <div class="card-header">
+                        <h3 class="mb-0">評価結果</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- テスト結果 -->
+                        <div class="mb-4">
+                            <h5>テスト結果</h5>
+                            <div id="testResults"></div>
+                        </div>
+
+                        <!-- アドバイス -->
+                        <div class="mb-4">
+                            <h5>改善アドバイス</h5>
+                            <div id="adviceContent" class="alert alert-info"></div>
+                        </div>
+
+                        <!-- 改善提案 -->
+                        <div id="suggestionsSection" class="mb-4">
+                            <h5>具体的な改善提案</h5>
+                            <ul id="suggestionsList" class="list-group"></ul>
+                        </div>
+
+                        <!-- ヒント -->
+                        <div id="hintsSection" class="mb-4">
+                            <h5>実装のヒント</h5>
+                            <ul id="hintsList" class="list-group"></ul>
+                        </div>
+
+                        <!-- コスト情報 -->
+                        <div class="text-muted small">
+                            <span id="costInfo"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/main.js"></script>
+</body>
+</html>

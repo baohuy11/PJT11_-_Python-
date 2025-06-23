@@ -1,0 +1,118 @@
+/* カスタムスタイル */
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.card-header {
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#codeInput {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.test-result {
+    margin-bottom: 10px;
+}
+
+.test-passed {
+    border-left: 4px solid #28a745;
+    background-color: #d4edda;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.test-failed {
+    border-left: 4px solid #dc3545;
+    background-color: #f8d7da;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.test-error {
+    border-left: 4px solid #ffc107;
+    background-color: #fff3cd;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.code-block {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    white-space: pre-wrap;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.submission-status {
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-evaluated {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.problem-difficulty {
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.difficulty-beginner {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.difficulty-intermediate {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.difficulty-advanced {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.btn-sm {
+    font-size: 12px;
+}
